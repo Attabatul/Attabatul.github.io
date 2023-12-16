@@ -1,1 +1,43 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #interactive-div {
+      padding: 20px;
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+    #changeColorBtn {
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="interactive-div">
+  <h1>Welcome to the Interactive Page!</h1>
+  <p>Click the button below to change the background color:</p>
+  <button id="changeColorBtn" onclick="changeBackgroundColor()">Change Color</button>
+</div>
+
+<script>
+  function changeBackgroundColor() {
+    var colors = ["#ff9999", "#99ff99", "#9999ff", "#ffff99", "#ffcc99"];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById("interactive-div").style.backgroundColor = randomColor;
+  }
+</script>
+
+</body>
+</html>
